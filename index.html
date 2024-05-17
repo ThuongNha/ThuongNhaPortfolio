@@ -1,0 +1,409 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Prologue by HTML5 UP</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<div id="header">
+		<div class="top">
+			<!-- Logo -->
+			<div id="logo">
+				<span class="image avatar48"><img src="images/cvbillede.jpg" alt="" /></span>
+				<h1 id="title">Thuong Nha</h1>
+				<p>Software Engineer</p>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+					<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a>
+					</li>
+					<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+					<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="bottom">
+			<!-- Social Icons -->
+			<ul class="icons">
+				<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li> -->
+				<li><a href="mailto:thuongnha.huynh@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul> 
+
+		</div>
+
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Intro -->
+		<section id="top" class="one dark cover">
+			<div class="container">
+				<header>
+					<h2 class="alt">Hi! I'm <strong>Thuong Nha</strong></h2>
+					<p><strong>Software Developer</strong></p>
+				</header>
+				<footer>
+					<a href="#contact" class="button scrolly">Contact Me</a>
+				</footer>
+			</div>
+		</section>
+
+		<!-- Portfolio -->
+		<section id="portfolio" class="two">
+			<div class="container">
+
+				<header>
+					<h2>Portfolio</h2>
+				</header>
+				<p>These are the projects I have taken part of or created myself since I started my journey as a
+					<strong>Software Developer</strong>.
+				</p>
+				<!-- Modal -->
+				<script>
+					function openModal(modalId) {
+						var modal = document.getElementById(modalId);
+						modal.showModal();
+					}
+
+					// Function to close the modal when clicking outside of it
+					function closeModal(event, modalId) {
+						var modal = document.getElementById(modalId);
+						if (event.target === modal) {
+							modal.close();
+						}
+					}
+				</script>
+				<dialog id="worldofzuul" onclick="closeModal(event, 'worldofzuul')">
+
+					<h2>World of Zuul</h2>
+					<p> World of Zuul is the first coding project I ever worked on
+						collaborating with other students.</p>
+					<p> The original World of Zuul is a text based game.
+						We changed the game into a Cluedo (board game) inspired game.</p>
+
+					<p><strong>Programming:</strong><br>
+						Programming Language: Java, using OOP concepts<br>
+						My tasks for the game included: <br>
+						A timer to deduct time for every action made by the player<br>
+						Item generator, including descriptions of the items, item usage, and an inventory.<br>
+						Implementing 6 commands in the game:<br>
+						"Go" to move around the rooms<br>
+						"Search" to search the rooms for items or clues<br>
+						"Take" to pick up items<br>
+						"Use" to use an item<br>
+						"Arrest" to arrest a suspect<br>
+						"Ask" to ask questions
+					</p>
+					<button aria-label="close" onclick="window.worldofzuul.close();" class="x">❌</button>
+				</dialog>
+
+				<dialog id="copterdrone" onclick="closeModal(event, 'copterdrone')">
+					<h2>Copter Drone</h2>
+					<p>The main focus of this project is to learn about automation and RESTful API communication between
+						a drone and a device (mobile phone, computer etc.).
+					</p>
+					<p>
+						Web-Based technologies used in this project:<br />
+						Frontend: HTML, CSS and Javascript <br />
+						Backend: Node.js <br />
+						Communication: AJAX <br />
+					</p>
+					<p>
+						Drone-based technologies used in this project:<br />
+						Python<br />
+						DroneKit - A Python Module <br />
+						Raspberry Pi <br />
+						Python communication with Mavlink <br />
+					</p>
+					<button onclick="window.copterdrone.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+
+				<dialog id="buildcode" onclick="closeModal(event, 'buildcode')">
+					<h2>BuildCode</h2>
+					<p> I was an intern at BuildCode for a duration of 6 months,
+						and collaborated with BuildCode on my bachelor thesis project.
+						The project involved the development of a website enabling BuildCode's
+						customers to place scanning orders. Back then all orders were done
+						through phonecalls.
+					</p>
+					<p>
+						<strong>Frontend technologies:</strong><br />
+						HTML/CSS<br />
+						JavaScript<br />
+						Vue<br />
+						Google Maps API<br />
+						Login/Registration<br />
+						Administration
+					</p>
+					<p>
+						<strong>Backend technologies:</strong><br />
+						Node.js<br />
+						JSON Web Tokens<br />
+						REST API
+					</p>
+					<p>
+						<strong>Database:</strong><br />
+						MongoDB
+					</p>
+					<p>
+						<strong>Other Tools used:</strong><br />
+						Postman<br />
+						Stripe
+					</p>
+					<button onclick="window.buildcode.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+
+				<dialog id="instagramclone" onclick="closeModal(event, 'instagramclone')">
+					<h2>Instagram Clone</h2>
+					<p> This is the first project I made on React Native.
+						After I had a semester in Android Programming I got curious about
+						app development.
+					</p>
+					<p>
+						<a href="https://github.com/ThuongNha/InstagramClone">Click here to visit the GitHub
+							repository</a>
+					</p>
+					<p>
+						The application has a simple login/registration page, and after logging in you will be
+						met with 4 tabs that you can navigate between. One of the tabs allow users to take
+						a snapshot and save the image to the profile page. The application also allows users to
+						follow and unfollow other profiles.
+					</p>
+					<p>
+						The technologies used are: <br />
+						JavaScript <br />
+						Redux<br />
+						Firebase<br />
+						React-Navigation
+					</p>
+					<button onclick="window.instagramclone.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+
+				<dialog id="spitonshapes" onclick="closeModal(event, 'spitonshapes')">
+					<h2>Spit on Shapes</h2>
+					<p> Spit on Shapes is the first Android Mobile game that I released on
+						Google Play. I used Unity2D to develop the game and the main reason for the
+						game engine is because I enjoy coding in c#.
+					</p>
+					<p>
+						<a href="https://play.google.com/store/apps/details?id=com.tripletapstudios.spitonshapes">Click
+							here to try Spit on Shapes from the Google Play Store</a>
+					</p>
+					<p>
+						The game is about "spitting" on shapes-like enemies to defend yourself, and while
+						you spit and destroy the enemies you will level up and gain stat and skill points.
+						Those points can be used to level up, upgrade stats and abilities to become more powerful.
+						There are boss fights and a bunch of waves and maps to complete.
+					</p>
+					<button onclick="window.spitonshapes.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+
+				<dialog id="idlebrickbomber" onclick="closeModal(event, 'idlebrickbomber')">
+					<h2>Idle Brick Bomber</h2>
+					<p> Idle Brick Bomber is the Android game that I'm currently developing in Unity2D.
+						The game is in Early Access and I plan to add a few new features before
+						full release.
+					</p>
+					<p>
+						<a
+							href="https://play.google.com/store/apps/details?id=com.IdleBrickBomber.com.unity.template.mobile2D">Click
+							here to try Idle Brick Bomber from the Google Play Store</a>
+					</p>
+					<p>
+						As the name of the game indicates, it's an Idle game so you don't have to do (that)
+						much. Like the classic Brick Breaker game, there will be bricks that can be destroyed
+						by some sort of projectile. In this game there will be a cannon automatically shooting
+						at bricks, and each destroyed brick will grant you some in-game currency that you can use to
+						upgrade your cannon.
+					</p>
+					<p>
+						Some of the Idle elements that I added are: <br />
+						Upon pausing or closing the game for more than 5 minutes, you'll be greeted with a prompt to
+						claim some cash.<br />
+						As mentioned, the cannon shoots automatically so you can progress without doing anything,
+						but the further you get into the game, the longer it will take for the cannon to destroy
+						all the bricks. <br />
+					</p>
+					<button onclick="window.idlebrickbomber.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+				<dialog id="otherprojects" onclick="closeModal(event, 'otherprojects')">
+					<h2>Other Projects</h2>
+					<p> These are a few projects I've either worked on independently or collaborated with others on:
+						<br />
+					</p>
+					<p>Elektroshop - a Webshop with login/registration/administration,
+						product information, search and sorting products (Java, SQL, PIM, CMS, DAM)</p>
+
+					<p>Anime version of IMDB (Android Studio, Java, Node.js and Firebase) </p>
+					<p>Application for the company Metropark (React, TypeScript) </p>
+					<p>Website for the company Nexcom (ASP.NET Core, Razor Pages, Metronic Theme) </p>
+					<p>Website for the company BuildCode (Laravel, MySQL, MongoDB Atlas) </p>
+					<p>Zombie Survival Game (Unity2D)</p>
+
+					<button onclick="window.otherprojects.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+				<dialog id="nextproject" onclick="closeModal(event, 'nextproject')">
+					<h2>What Is Next?</h2>
+					<p> </p>
+					<button onclick="window.nextproject.close();" aria-label="close" class="x">❌</button>
+				</dialog>
+
+				<div class="row">
+					<!-- FIRST COLUMN-->
+					<div class="col-4 col-12-mobile">
+						<article class="item " onclick="openModal('worldofzuul')">
+							<a class="image fit"><img src="images/Char4.png" alt="" /></a>
+							<header>
+								<h3>World of Zuul (2016)</h3>
+							</header>
+						</article>
+						<article class="item" onclick="openModal('instagramclone')">
+							<a class="image fit"><img src="images/Instagram.png" alt="" /></a>
+							<header>
+								<h3>Instagram Clone (2021)</h3>
+							</header>
+						</article>
+						<article class="item" onclick="openModal('otherprojects')">
+							<a class="image fit"><img src="images/Profile.png" alt="" /></a>
+							<header>
+								<h3>Other Projects</h3>
+							</header>
+						</article>
+					</div>
+					<!-- SECOND COLUMN-->
+					<div class="col-4 col-12-mobile">
+						<article class="item" onclick="openModal('copterdrone')">
+							<a class="image fit"><img src="images/Drone.png" alt="" /></a>
+							<header>
+								<h3>Copter Drone (2018)</h3>
+							</header>
+						</article>
+						<article class="item" onclick="openModal('spitonshapes')">
+							<a class="image fit"><img src="images/SoS.png" alt="" /></a>
+							<header>
+								<h3>Spit on Shapes (2021)</h3>
+							</header>
+						</article>
+						<article class="item" onclick="openModal('nextproject')">
+							<a class="image fit"><img src="images/Profile.png" alt="" /></a>
+							<header>
+								<h3>What Is Next?</h3>
+							</header>
+						</article>
+					</div>
+					<!-- THIRD COLUMN-->
+					<div class="col-4 col-12-mobile">
+						<article class="item" onclick="openModal('buildcode')">
+							<a class="image fit"><img src="images/buildcode.png" alt="" /></a>
+							<header>
+								<h3>BuildCode (2020)</h3>
+							</header>
+						</article>
+						<article class="item" onclick="openModal('idlebrickbomber')">
+							<a class="image fit"><img src="images/Ibb.png" alt="" /></a>
+							<header>
+								<h3>Idle Brick Bomber (2024)</h3>
+							</header>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Me -->
+		<section id="about" class="three">
+			<div class="container">
+
+				<header>
+					<h2>About Me</h2>
+				</header>
+
+				<a href="#" class="image centered"><img src="images/Background.png" alt="" /></a>
+
+				<p>Hey there! <br/> I go by many names, but the most used are Nha or Thomas. Thomas is a name
+					that I have been using the last 2-3 years since it's easier to pronounce for most people.
+					I hold a BEng in Software Technology, and have since been working on my coding skills.
+				</p>
+				<p>
+					I grew up with video games which explains my lastest projects being game related.
+					However, I do have the affinity for visual aspects of a Frontend Developer, since my imagination is
+					like that of a kids' - I see dragons and fairies flying everywhere. On a more serious
+					note, from a design point of view I like simplicity. When things look nice and organized,
+					yet modern and sophisticated, that's the kind of frontend developer I aspire to become.
+				</p>
+				<p>
+					I am currently looking for a full time job in Denmark as a Frontend Developer.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="four">
+			<div class="container">
+				<header>
+					<h2>Contact</h2>
+				</header>
+				<p>
+					For any inquiries, feel free to send me a mail! <br/>
+					
+				<a  href="mailto:thuongnha.huynh@gmail.com"><strong>thuongnha.huynh@gmail.com</strong></a>
+						</p>
+				<!-- <form id="contactForm" method="post" action="send_email">
+					<div class="row">
+						<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
+						<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
+						<div class="col-12">
+							<textarea name="message" placeholder="Message"></textarea>
+						</div>
+						<div class="col-12">
+							<input type="submit" value="Send Message" />
+						</div>
+					</div>
+				</form> -->
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
