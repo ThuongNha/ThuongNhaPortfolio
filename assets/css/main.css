@@ -2592,7 +2592,9 @@ input, select, textarea {
 				letter-spacing: 0;
 				font-weight: 300;
 			}
-
+			p {
+				font-size: 1.2em;
+			}
 			.container {
 				padding: 0 15px 0 15px;
 			}
@@ -2658,7 +2660,7 @@ input, select, textarea {
 
 
 
-/*Dialog Styles*/
+/* Dialog Styles */
 #modalCover {
     position: fixed;
     top: 0;
@@ -2678,14 +2680,16 @@ dialog {
     max-width: 50%;
     width: 50%;
     max-height: 60%;
-    height: 60%;
+    height: auto;
     border-radius: 20px;
     border: none;
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease both;
     overflow: auto; /* Allow scrolling inside the modal if content is too large */
     z-index: 1000; /* Ensure the modal is on top of other elements */
-	background: #c1c2c3 url("images/overlay.png");
+    background: #c1c2c3 url("images/overlay.png");
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width and height */
 }
 
 dialog::backdrop {
@@ -2700,13 +2704,15 @@ dialog::backdrop {
     border: none;
     background: none;
     position: absolute;
-    top: 15px;
-    right: 10px;
+    top: -20px; /* Move the button above the dialog */
+    right: -20px; /* Move the button to the right of the dialog */
     transition: filter 0.3s ease, transform 0.3s ease;
     cursor: pointer;
     transform-origin: center;
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduce the size */
     outline: none; /* Remove outline */
+    padding: 0; /* Remove padding */
+    line-height: 1; /* Adjust line height */
 }
 
 .x:hover {
@@ -2717,13 +2723,14 @@ dialog::backdrop {
 
 h2 {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 2rem;
     padding-bottom: 1rem;
+    margin-top: 0;
 }
 
 p {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
 }
 
 .custom-list {
@@ -2746,13 +2753,62 @@ p {
     margin-right: 0.5rem; /* Adds space between title and content */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-		to {
-			opacity: 1;
-		}
-	}
-	
+/* Responsive Styles */
+@media (max-width: 768px) {
+    dialog {
+        max-width: 80%;
+        width: 80%;
+        max-height: 70%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .x {
+        font-size: 1.2rem; /* Adjusted size */
+        top: 5px; /* Adjusted position */
+        right: 5px; /* Adjusted position */
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    dialog {
+        max-width: 90%;
+        width: 90%;
+        max-height: 80%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .x {
+        font-size: 1rem; /* Further adjusted size */
+        top: 5px; /* Further adjusted position */
+        right: 5px; /* Further adjusted position */
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+}
